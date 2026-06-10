@@ -425,7 +425,7 @@ static void io_file_marshal(void *p, JanetMarshalContext *ctx) {
             fno = fileno(iof->file);
         } else {
 #ifdef JANET_PLAN9
-			fno = dup(fileno(iof->file), -1);
+            fno = dup(fileno(iof->file), -1);
 #else
             fno = dup(fileno(iof->file));
 #endif
